@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm)",
+      "Bash(where npx)",
+      "Bash(netstat -ano)",
+      "Bash(xargs -I{} taskkill /PID {} /F)",
+      "Bash(taskkill /PID 3984 /F)",
+      "Bash(taskkill /PID 22488 /F)",
+      "Bash(taskkill /PID 39400 /F)",
+      "Bash(taskkill //PID 3984 //F)",
+      "Bash(taskkill //PID 22488 //F)",
+      "Bash(taskkill //PID 39400 //F)"
+    ]
+  }
+}
