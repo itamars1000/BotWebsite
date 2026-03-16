@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 const BOT_LINK = "https://t.me/yaditabot"
+const PAYBOX_LINK = "https://links.payboxapp.com/f9r2nhvpy1b"
 
 function TelegramIcon({ className }) {
   return (
@@ -274,6 +275,33 @@ function DemoMessage({ msg, fresh }) {
   )
 }
 
+function PayboxSection() {
+  return (
+    <section className="bg-white py-10 px-5">
+      <div className="rounded-3xl p-7 text-center" style={{ background: "#F0FDF4", boxShadow: "0 4px 20px rgba(15,23,42,0.07)" }}>
+        <div className="text-4xl mb-4">💳</div>
+        <h2 className="text-[1.4rem] font-black text-[#0F172A] leading-tight mb-2">
+          רוצה לתמוך בפרויקט?
+        </h2>
+        <p className="text-[#475569] text-sm font-medium leading-relaxed mb-6">
+          שלם בקלות דרך פייבוקס ועזור לנו להמשיך לפתח את הבוט.
+          פעילות הבוט כרוכה במספר תשלומים לכן נשמח שתעזרו לו להיות באוויר.
+        </p>
+        <a
+          href={PAYBOX_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full h-14 rounded-full font-bold text-base text-white"
+          style={{ background: "#16A34A", boxShadow: "0 8px 24px rgba(22,163,74,0.35)" }}
+        >
+          <span className="text-lg">💳</span>
+          תשלום דרך פייבוקס
+        </a>
+      </div>
+    </section>
+  )
+}
+
 function LiveDemoFeed() {
   var initial = [ALL_DEMO[1], ALL_DEMO[2], ALL_DEMO[3]]
   var result = useState(initial)
@@ -409,6 +437,7 @@ export default function App() {
       <main>
         <HeroSection />
         <TrustBadges />
+        <PayboxSection />
         <FeaturesSection />
         <HowItWorksSection />
         <LiveDemoFeed />
